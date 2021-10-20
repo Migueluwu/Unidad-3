@@ -58,6 +58,7 @@ public class ejercicio7 {
             default:
                 System.out.println("Ha seleccionado terminar");
                 break;
+                
         }
     }
 
