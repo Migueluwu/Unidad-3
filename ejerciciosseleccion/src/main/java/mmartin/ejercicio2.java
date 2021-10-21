@@ -24,6 +24,7 @@ public class ejercicio2 {
         System.out.println(numero>135 ?"Mayor" :"menor");
         System.out.println(numero<0 ?"Menor que 0" :"Mayor que 0");
         if(numero<0){
+            
             numero=numero*(-1);
             System.out.println(numero);
         }
