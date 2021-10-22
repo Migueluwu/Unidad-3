@@ -18,7 +18,7 @@ public class ejercicio5 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
-        int opcion;
+        int opcion=0;
 
         System.out.println("Menú de opciones");
         System.out.println("-------------------------");
@@ -27,37 +27,46 @@ public class ejercicio5 {
         System.out.println("3. Calcular el área de un Círculo");
         System.out.println("4. Finalizar");
 
-        System.out.print("Elija una opción: ");
-        opcion = entrada.nextInt();
-
-        if (opcion == 1) {
-            System.out.println("Ha seleccionado calcular el área de un cuadrado...");
-            System.out.println("introduce cuanto mide un lado del cuadrado");
-            int lado = entrada.nextInt();
-            int areaCuadrado = (int) Math.pow(lado, 2);
-            System.out.println("el area del cuadrado es " + areaCuadrado);
-        } else {
-            if (opcion == 2) {
-                System.out.println("Ha seleccionado calcular el     área de un triángulo...");
-                System.out.println("introduce cuanto mide la base del triangulo ");
-                int baseTriangulo = entrada.nextInt();
-                System.out.println("introduce cuanto mide la altura del traingulo");
-                int alturaTriangulo = entrada.nextInt();
-                int areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
-                System.out.println("el area del triangulo es " + areaTriangulo);
+        
+        
+        do {
+            System.out.println("Elija una opción: ");
+            opcion = entrada.nextInt();
+            if (opcion == 1) {
+                System.out.println("Ha seleccionado calcular el área de un cuadrado...");
+                System.out.println("introduce cuanto mide un lado del cuadrado");
+                int lado = entrada.nextInt();
+                int areaCuadrado = (int) Math.pow(lado, 2);
+                System.out.println("el area del cuadrado es " + areaCuadrado);
             } else {
-                if (opcion == 3) {
-                    System.out.println("Ha seleccionado calcular el área de un círculo...");
-                    System.out.println("introduce el radio del circulo");
-                    int radioCirculo = entrada.nextInt();
-                    double areaCirculo = Math.PI * Math.pow(radioCirculo, 2);
-                    System.out.println("el area del circulo es de " + areaCirculo);
+                if (opcion == 2) {
+                    System.out.println("Ha seleccionado calcular el área de un triángulo...");
+                    System.out.println("introduce cuanto mide la base del triangulo ");
+                    int baseTriangulo = entrada.nextInt();
+                    System.out.println("introduce cuanto mide la altura del traingulo");
+                    int alturaTriangulo = entrada.nextInt();
+                    int areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
+                    System.out.println("el area del triangulo es " + areaTriangulo);
                 } else {
-                    System.out.println("Ha seleccionado terminar");
+                    if (opcion == 3) {
+                        System.out.println("Ha seleccionado calcular el área de un círculo...");
+                        System.out.println("introduce el radio del circulo");
+                        int radioCirculo = entrada.nextInt();
+                        double areaCirculo = Math.PI * Math.pow(radioCirculo, 2);
+                        System.out.println("el area del circulo es de " + areaCirculo);
+                    } else {
+                        if(opcion==4){
+                            System.out.println("has selecionado terminar");
+                        
+                        }else{
+                            System.out.println("Opcion no valida");
+                        }
+                    }
+
                 }
 
             }
-
-        }
+        }while(opcion != 4);
+        
     }
 }

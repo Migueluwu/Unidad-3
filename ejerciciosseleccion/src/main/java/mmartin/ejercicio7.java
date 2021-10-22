@@ -20,7 +20,7 @@ public class ejercicio7 {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         int opcion;
-
+        do{
         System.out.println("Menú de opciones");
         System.out.println("-------------------------");
         System.out.println("1. Calcular el área de un Cuadrado");
@@ -55,11 +55,15 @@ public class ejercicio7 {
                 double areaCirculo = Math.PI * Math.pow(radioCirculo, 2);
                 System.out.println("el area del circulo es de " + areaCirculo);
                 break;
+            case 4:
+                System.out.println("Ha selecionado terminar");
+                break;
             default:
-                System.out.println("Ha seleccionado terminar");
+                System.out.println("opcion no valida");
                 break;
                 
         }
+        }while(opcion!=4);
     }
 
 }
